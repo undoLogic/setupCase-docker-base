@@ -5,6 +5,8 @@ RUN a2enmod rewrite ssl headers
 
 # Update and Install Dependencies
 RUN apt-get update && apt-get install -y \
+    inetutils-ping \
+    nano \
     lpr \
     qrencode \
     wkhtmltopdf \
@@ -29,6 +31,7 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     libonig-dev \
     libxslt1-dev \
+    openssh-server \
     && rm -r /var/lib/apt/lists/*
 
 # Install PHP Extensions
